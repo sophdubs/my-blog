@@ -1,15 +1,35 @@
 import React from "react";
+import Proptypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class ArticleLink extends React.Component {
-  navigateToArticle = () => {
-    console.log(this);
+  static propTypes = {
+    article: Proptypes.object.isRequired
   };
+  navigateToArticle = () => {};
 
   render() {
     return (
       <div className="ArticleLink">
-        <h1 onClick={this.navigateToArticle}>title</h1>
-        <p>Short Summary</p>
+        {/* <Link
+          to={{
+            pathname: `article/${this.props.article.id}`,
+            article: this.props.article
+          }}
+        > */}
+        {/*         
+          {this.props.article.title}
+        </Link> */}
+        <Link
+          to={{
+            pathname: `article/${this.props.article.id}`,
+            article: this.props.article
+          }}
+        >
+          {this.props.article.title}
+        </Link>
+
+        <p>{this.props.article.summary}</p>
         <p> IMAGE </p>
       </div>
     );

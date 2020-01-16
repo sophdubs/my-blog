@@ -25,7 +25,9 @@ class App extends React.Component {
       <div className="App">
         <h1 className="title">My Blog</h1>
         <h4 className="name">Sophie Dubois</h4>
-        <ArticleLink articles={this.state.articles} />
+        {this.state.articles.map(article => (
+          <ArticleLink article={article} key={article.published} />
+        ))}
       </div>
     );
   }
