@@ -10,26 +10,17 @@ class ArticleLink extends React.Component {
 
   render() {
     return (
-      <div className="ArticleLink">
-        {/* <Link
-          to={{
-            pathname: `article/${this.props.article.id}`,
-            article: this.props.article
-          }}
-        > */}
-        {/*         
-          {this.props.article.title}
-        </Link> */}
-        <Link
-          to={{
-            pathname: `article/${this.props.article.id}`,
-            article: this.props.article
-          }}
-        >
-          {this.props.article.title}
-        </Link>
-
-        <p>{this.props.article.summary}</p>
+      <div>
+        <div>
+          <Link
+            to={{
+              pathname: `article/${this.props.article.id}`,
+              article: this.props.article
+            }}
+          >
+            {this.props.article.title}
+          </Link>
+        </div>
         <p> IMAGE </p>
       </div>
     );

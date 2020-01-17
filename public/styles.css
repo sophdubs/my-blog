@@ -1,0 +1,154 @@
+.page {
+  background: url(images/background9.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.container {
+  width: 75%;
+  height: auto;
+  margin: 4em auto;
+  background-color: rgba(248, 217, 208, 0.5);
+  outline: 1px solid white;
+  outline-offset: -30px;
+  padding: 50px;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 6fr;
+  grid-template-areas:
+    "nav"
+    "image"
+    "articles";
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.image-div {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  height: 100%;
+  grid-area: image;
+  background: url(./images/background.jpeg) no-repeat center center;
+  outline: 1px solid white;
+  outline-offset: 20px;
+  margin-top: 30px;
+}
+
+.hello-world {
+  color: #1f0404e1;
+  position: absolute;
+  top: 30%;
+  left: 38%;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
+    "Bitstream Vera Sans Mono", monospace;
+  font-size: 40px;
+}
+
+.sophie {
+  color: #1f0404e1;
+  position: absolute;
+  top: 45%;
+  left: 41%;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 80px;
+}
+
+.nav {
+  grid-area: nav;
+  width: 100%;
+}
+
+.nav-div {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "a b c d e";
+  grid-gap: 5%;
+  align-items: center;
+  justify-items: center;
+}
+
+.b {
+  grid-area: b;
+  background: url(./images/text-file-4-32.ico) no-repeat center center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.b:hover {
+  background: none;
+}
+
+.article-icon-text {
+  opacity: 0;
+}
+
+.article-icon-text:hover {
+  opacity: 1;
+  color: white;
+  font-size: 15px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
+    "Bitstream Vera Sans Mono", monospace;
+  text-decoration: underline;
+}
+
+.c {
+  grid-area: c;
+  background: url(./images/contacts-32.ico) no-repeat center center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.c:hover {
+  background: none;
+}
+
+.about-me-icon-text {
+  opacity: 0;
+}
+
+.about-me-icon-text:hover {
+  color: white;
+  opacity: 1;
+  font-size: 15px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
+    "Bitstream Vera Sans Mono", monospace;
+  text-decoration: underline;
+  text-shadow: 2px 2px pink;
+}
+
+.d {
+  grid-area: d;
+  background: url(./images/business-contact-32.ico) no-repeat center center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.d:hover {
+  background: none;
+}
+
+.contact-icon-text {
+  opacity: 0;
+}
+
+.contact-icon-text:hover {
+  color: white;
+  opacity: 1;
+  font-size: 15px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
+    "Bitstream Vera Sans Mono", monospace;
+  text-decoration: underline;
+}
+
+.articles {
+  grid-area: articles;
+}

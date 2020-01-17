@@ -1,6 +1,7 @@
 import React from "react";
 import ArticleLink from "./ArticleLink";
 import db from "../db/db";
+import NavBar from "./NavBar";
 
 class App extends React.Component {
   state = {
@@ -23,11 +24,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1 className="title">My Blog</h1>
-        <h4 className="name">Sophie Dubois</h4>
-        {this.state.articles.map(article => (
-          <ArticleLink article={article} key={article.published} />
-        ))}
+        <div className="nav">
+          <NavBar />
+        </div>
+        <div className="image-div">
+          <div className="image"></div>
+          <div className="hello-world">Hello World,</div>
+          <div className="sophie">I&apos;m Sophie</div>
+        </div>
+
+        <div className="articles">
+          {this.state.articles.map((article, i) => (
+            <ArticleLink article={article} key={i + 1} index={i + 1} />
+          ))}
+        </div>
       </div>
     );
   }
